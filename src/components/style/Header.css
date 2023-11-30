@@ -1,0 +1,48 @@
+.bg-image-header{
+    background-image: url(../assets/images/banner-bg.png);
+}
+
+
+.carousel-control-prev{
+    display: none !important;
+}
+.carousel-control-next{
+    display: none !important;
+}
+.carousel-indicators{
+    display: none !important;
+}
+.carousel-caption h3{
+    text-align: start;
+}
+.carousel-caption p{
+    font-size: 15px;
+    line-height: 1.5rem;
+}
+.carousel-caption {
+    width: 240px;
+    height: 130px;
+    top: 30px;
+    position: absolute;
+    right: 100px !important;
+    left: auto;
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 24px;
+    padding: 18px 20px;
+}
+.carousel-caption:after {
+    content: "";
+    position: absolute;
+    bottom: -35px;
+    width: 0;
+    left: 30px;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 35px solid #fff;
+}
+.carousel-item img{
+    height: 384px;
+    width: 400px;
+}

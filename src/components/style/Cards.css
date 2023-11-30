@@ -1,0 +1,16 @@
+.card-image img{
+    width: 40px;
+    height: auto;
+}
+
+.navigation-card{
+    border-left: #ffffff 5px solid !important;
+    padding-left: 6px;
+    box-shadow: 1px 4px 11.5px #ffffff;
+}
+
+.navigation-card:hover{
+    border-left: #4ba9cece 5px solid !important;
+    padding-left: 6px;
+    box-shadow: 1px 4px 11.5px rgba(56, 54, 54, 0.78)
+}

@@ -1,0 +1,13 @@
+.navbar-col-title{
+    border-width: 5px;
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+    width: 984px;
+    position: absolute;
+    margin-left: -561px;
+    padding: 10px 15px;
+    top: 78px;
+    border: 0;
+    right: auto !important;
+}
