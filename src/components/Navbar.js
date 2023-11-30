@@ -149,6 +149,52 @@ export default function NavigationBar() {
       ],
     },
   ];
+  const companyData = [
+   {
+    data:[
+      {
+        name: "What we do",
+        image: ecommerce,
+      },
+      {
+        name: "How it works",
+        image: transformating,
+      },
+      {
+        name: "Core Team",
+        image: team,
+      }
+    ]
+   },
+   {
+    data:[
+      {
+        name: "Portfolio",
+        image: portfolio,
+      },
+      {
+        name: "Training",
+        image: training,
+      },
+      {
+        name: "Events",
+        image: marketing,
+      }
+    ]
+   },
+   {
+    data:[
+      {
+        name: "What we do",
+        image: ecommerce,
+      },
+      {
+        name: "What we do",
+        image: ecommerce,
+      }
+    ]
+   }
+  ];
   return (
     <Navbar collapseOnSelect expand="lg" className="bg-gray-100">
       <Container>
@@ -166,40 +212,34 @@ export default function NavigationBar() {
               id="collapsible-nav-dropdown"
             >
               <div className="row">
-                {
-                data.map((item, index) => {
-                  const myFunction = () => {
-                    return (
-                      <div className="col-md-3">
-                        <h2 className="text-blue-400 fw-bolder">
-                          {item.title}
-                        </h2>
-                        <NavDropdown.Item className="m-0 p-0">
-                          <Cards data={item.data} />
-                        </NavDropdown.Item>
-                      </div>
-                    );
-                  };
-                  return index === 0 ||
-                    index === 1 ||
-                    index === 3 ||
-                    index === 6
-                    ? myFunction()
-                    : "";
-                })
-                }
+                {data.map((item, index) => {
+                  return (
+                    <div className="col-md-3">
+                      <h2 className="text-blue-400 fw-bolder">{item.title}</h2>
+                      <NavDropdown.Item className="m-0 p-0">
+                        <Cards data={item.data} />
+                      </NavDropdown.Item>
+                    </div>
+                  );
+                })}
               </div>
             </NavDropdown>
             <NavDropdown
               title="Company"
-              className="text-black rounded-md px-3 py-2 text-sm font-bold"
+              className="text-black rounded-md company-dropdown px-3 py-2 text-sm font-bold"
               id="collapsible-nav-dropdown"
             >
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <div className="row">
+                {companyData.map((item, index) => {
+                  return (
+                    <div className="col-md-4">
+                      <NavDropdown.Item className="m-0 p-0">
+                        <Cards data={item.data} />
+                      </NavDropdown.Item>
+                    </div>
+                  );
+                })}
+              </div>
             </NavDropdown>
             <NavLink
               eventKey={2}

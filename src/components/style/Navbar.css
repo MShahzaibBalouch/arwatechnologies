@@ -11,3 +11,6 @@
     border: 0;
     right: auto !important;
 }
+.company-dropdown .dropdown-menu{
+    margin-left: -692px !important;
+}

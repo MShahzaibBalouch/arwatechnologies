@@ -9,7 +9,7 @@ const Cards = ({data}) => {
         data.map((item)=>{
           return <Card className="my-2 border-0 navigation-card d-flex flex-row gap-2 align-items-center py-1 px-2 m-0">
           <div className="card-image">
-              <img src={item.image} alt="card" />
+              <img src={item.image} alt={item.name} />
           </div>
           <div className="card-content">
               <p className='field-name'>{item.name}</p>
